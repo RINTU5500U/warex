@@ -5,7 +5,7 @@ const {addSKU, updateSKU, fetchSKUSBySearch, searchSKUSByFilter, orderSKU} = req
 const { skuValidation, skuUpdateValidation } = require("../middlewares/validationMware")
 
 router.post('/addSKU', skuValidation, addSKU)
-router.put('/updateSKU', skuUpdateValidation, updateSKU)
+router.put('/updateSKU/:skuId', skuUpdateValidation, updateSKU)
 router.get('/fetchSKUSBySearch', fetchSKUSBySearch)
 router.get('/searchSKUSByFilter/:search', searchSKUSByFilter)
 router.post('/orderSKU/:skuId', orderSKU)
